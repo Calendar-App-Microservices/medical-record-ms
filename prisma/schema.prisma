@@ -39,15 +39,15 @@ model Evolution {
   note            String
   createdAt       DateTime      @default(now())
   medicalRecord   MedicalRecord @relation(fields: [medicalRecordId], references: [id], onDelete: Cascade)
-  professional    Professional  @relation(fields: [professionalId], references: [id], onDelete: Cascade)
+  //professional    Professional  @relation(fields: [professionalId], references: [id], onDelete: Cascade)
 }
 
 // Modelo de Professional (referencia desde auth, no se crea aquí)
-model Professional {
+/*model Professional {
   id          String       @id @map("id") @db.Uuid
   name        String
   email       String       @unique
   createdAt   DateTime     @default(now())
   updatedAt   DateTime     @updatedAt
   evolutions  Evolution[]
-}
+}*/
